@@ -1,45 +1,83 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Kisah Sukses Premium</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sumber Inspirasi</title>
+  <meta name="description" content="Sumber Inspirasi — AI mentor, inspirasi, dan hiburan." />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ff8a00">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Kisah Sukses Premium</h1>
-</header>
+  <main class="page">
+    <header class="hero">
+      <div class="brand">
+        <img src="logo.png" alt="Sumber Inspirasi" class="logo">
+        <div>
+          <h1 class="title">Sumber Inspirasi</h1>
+          <p class="tag">Bangkit. Berkarya. Berarti.</p>
+        </div>
+      </div>
+    </header>
 
-<section class="container">
-<div class="kisah">
-<h2>Kisah Sukses Hari Ini</h2>
-<p id="kisahText">Orang sukses bukan karena hebat, tapi karena tidak menyerah.</p>
-</div>
+    <section class="top-media card">
+      <div class="media-left">
+        <h3>Mini YouTube — Play & Search</h3>
+        <div class="youtube-controls">
+          <input id="ytSearch" placeholder="Cari lagu atau video (misal: motivational music)" />
+          <button id="ytSearchBtn">Search (open results)</button>
+          <input id="ytPlay" placeholder="Paste YouTube URL or ID to play" />
+          <button id="ytPlayBtn">Play</button>
+        </div>
+        <div class="player">
+          <iframe id="ytPlayer" width="100%" height="240" src="https://www.youtube.com/embed/5qap5aO4i9A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="media-right">
+        <h3>Quotes Hari Ini</h3>
+        <div id="dailyQuote" class="quote">Loading quote...</div>
+        <button id="newQuote">Refresh Quote</button>
+      </div>
+    </section>
 
-<div class="tools">
-<div class="yt_box">
-<input id="ytSearch" placeholder="Cari video YouTube..." />
-<button onclick="searchYT()">Cari</button>
-<input id="ytPlay" placeholder="Tempel URL/ID YouTube..." />
-<button onclick="playYT()">Putar</button>
-<iframe id="ytFrame" allowfullscreen></iframe>
-</div>
+    <section class="content">
+      <div class="card left-col">
+        <h2>AI Mentor</h2>
+        <div id="messages" class="messages"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="prompt" placeholder="Tanya sesuatu / Ask something..." autocomplete="off">
+          <button type="submit">Kirim</button>
+        </form>
+        <hr>
+        <h3>Buat Gambar (AI Image)</h3>
+        <input id="imgPrompt" placeholder="Buat gambar: misal 'superhero lucu di taman'">
+        <button id="genImage">Generate Image</button>
+        <div id="imageResult"></div>
+      </div>
 
-<div class="social">
-<a href="https://instagram.com" target="_blank">IG</a>
-<a href="https://facebook.com" target="_blank">FB</a>
-<a href="https://tiktok.com" target="_blank">TT</a>
-</div>
-</div>
-</section>
+      <div class="card right-col">
+        <h2>Feed Inspirasi</h2>
+        <div class="feeds">
+          <h4>Instagram</h4>
+          <div id="instaFeed" class="feed-row"></div>
+          <h4>TikTok</h4>
+          <div id="tiktokFeed" class="feed-row"></div>
+        </div>
+        <hr>
+        <h3>Bagikan</h3>
+        <div class="share-buttons">
+          <button id="shareWA">WhatsApp</button>
+          <button id="shareX">X / Twitter</button>
+          <button id="shareFB">Facebook</button>
+        </div>
+      </div>
+    </section>
 
-<section class="ai_box">
-<h2>Asisten AI</h2>
-<input id="aiInput" placeholder="Tanyakan sesuatu..." />
-<button onclick="askAI()">Kirim</button>
-<div id="aiOutput"></div>
-</section>
+    <footer class="footer">© <span id="year"></span> Sumber Inspirasi — All rights reserved</footer>
+  </main>
 
-<script src="script.js"></script>
+  <script src="ai.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

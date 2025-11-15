@@ -1,0 +1,1 @@
+Sumber Inspirasi — Render-ready package. Set OPENAI_API_KEY in Render env to enable AI.

@@ -1,7 +1,13 @@
 {
-  "name": "kisah-sukses-final-express",
+  "name": "sumber-inspirasi",
   "version": "1.0.0",
+  "description": "Sumber Inspirasi - OpenAI direct (Render-ready)",
+  "main": "server.js",
   "type": "module",
-  "scripts": { "start": "node server.js" },
-  "dependencies": { "express": "^4.19.2" }
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
