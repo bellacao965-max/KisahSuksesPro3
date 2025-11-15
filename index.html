@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kisah Sukses Premium</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Kisah Sukses Premium</h1>
+</header>
+
+<section class="container">
+<div class="kisah">
+<h2>Kisah Sukses Hari Ini</h2>
+<p id="kisahText">Orang sukses bukan karena hebat, tapi karena tidak menyerah.</p>
+</div>
+
+<div class="tools">
+<div class="yt_box">
+<input id="ytSearch" placeholder="Cari video YouTube..." />
+<button onclick="searchYT()">Cari</button>
+<input id="ytPlay" placeholder="Tempel URL/ID YouTube..." />
+<button onclick="playYT()">Putar</button>
+<iframe id="ytFrame" allowfullscreen></iframe>
+</div>
+
+<div class="social">
+<a href="https://instagram.com" target="_blank">IG</a>
+<a href="https://facebook.com" target="_blank">FB</a>
+<a href="https://tiktok.com" target="_blank">TT</a>
+</div>
+</div>
+</section>
+
+<section class="ai_box">
+<h2>Asisten AI</h2>
+<input id="aiInput" placeholder="Tanyakan sesuatu..." />
+<button onclick="askAI()">Kirim</button>
+<div id="aiOutput"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
